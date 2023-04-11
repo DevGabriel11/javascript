@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            color: white;
+            background: green;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <div id="area">
+        interaja... 
+    </div>
+             
+    
+    <script>
+        var a1 = window.document.getElementById('area')
+        a1.addEventListener('click', clicar)
+        a1.addEventListener('mouseenter', entrar)
+        a1.addEventListener('mouseout', sair)
+
+        function clicar() {            
+            a1.innerText = 'Clicou!'
+            a1.style.background = 'red'
+            a1.style.color='black' //consegui deixar a fonte preta sozinho
+        }
+        function entrar() {
+            a1.innerText= 'Entrou!'
+        }
+        function sair() {
+            a1.innerText='Saiu!'
+            a1.style.background='green'
+            a1.style.color='white'
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>

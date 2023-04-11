@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+
+    <style>
+        h1 {
+        color: rgb(38, 23, 235);
+        text-align: center;
+                }
+        h3 {
+            color: red;
+            text-align: center;
+        }               
+        input#txtpais {
+            color: red;
+            text-align: center; 
+        }
+        
+        body {
+            background-color: rgb(11, 161, 149); 
+        
+        }
+        
+    
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+    <h1>Você é Brasileiro ou Estrangeiro?</h1>
+    <h3>Digite o país onde você nasceu:</h3><input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id="resultado">
+
+
+    </div>
+
+    
+
+    <script>
+        function verificar() {
+            var nacionalidade = window.document.querySelector('input#txtpais')
+            var resultado = window.document.querySelector('div#resultado')
+            resultado.innerHTML = `<p>Você nasceu em <strong>${nacionalidade}</strong></p>`
+
+                
+                if (nacionalidade == 'Brasil') {
+                    resultado.innerHTML += `<p>Sinto em lhe informar, mas infelizmente você é Brasileiro!</p>`
+
+                } 
+                
+                else {
+                    resultado.innerHTML += `<p>Parabéns, você é estrangeiro!</p>`
+
+
+                }
+                
+
+        }
+
+        //Tentei fazer o mesmo programa do DETAN só que pra nacionalidade, NÃO DEU CERTO AINDA  
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>

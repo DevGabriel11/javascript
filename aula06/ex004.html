@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 004</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+
+
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    
+    <script>
+
+        
+        var nome = window.prompt('Qual seu nome?')
+        document.write(`Olá, <strong>${nome}</strong>!!! Seu nome tem ${nome.length} letras!<br/>`) // Strong é Negrito - <br/> é pra quebrar a linha Break Row
+        document.write(`Seu nome em maiúsculo é ${nome.toUpperCase()}<br/>`) // toUpperCase é pra deixar tudo maiúsculo
+        document.write(`Seu nome em minúsculo é ${nome.toLowerCase()}<br/>`)
+
+        var idade = Number.parseInt(window.prompt('Quantos anos você tem?')) 
+        var d1 = idade.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        document.write(`Se sua idade fosse dinheiro, você teria ${d1}`)
+
+
+        
+        
+
+
+        
+
+        /*tentei fazer o número da idade virar um valor em dinheiro
+        tentei fazer a formatação do número em dinheiro ser a variavel d1
+        e tentei também colocar a formatação dentro da ${d1}
+        nenhuma das duas deu certo por enquanto, depois tento descobrir como*/
+
+        //talvez tenha que fazer uma manipulação de dados, transformando o 22 de string pra número
+
+
+
+    </script>
+</body>
+</html>
